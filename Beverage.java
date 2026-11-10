@@ -36,12 +36,16 @@ public class Beverage extends MenuItem {
     public double computePrice() {
         double price = basePrice;
 
+        // Checks if the selected size is Medium and adds 15 to the base price.
         if (size.equals("M")) {
             price += 15;
-        } else if (size.equals("L")) {
+        } 
+        // Checks if the selected size is Large and adds 25 to the base price.
+        else if (size.equals("L")) {
             price += 25;
         }
 
+        // Returns the final price after adding the size charge.
         return price;
     }
 
