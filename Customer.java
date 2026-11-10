@@ -50,19 +50,23 @@ public class Customer {
     }
 
     public void setLoyaltyPoints(int loyaltyPoints) {
+        // Checks if the loyalty points are zero or positive.
         if (loyaltyPoints >= 0) {
             this.loyaltyPoints = loyaltyPoints;
         }
     }
 
     public void addPoints(int points) {
+        // Checks if the given points are greater than zero before adding them.
         if (points > 0) {
             loyaltyPoints += points;
         }
     }
 
     public void addPoints(double amount) {
+        // Checks if the purchase amount is greater than zero.
         if (amount > 0) {
+        // Awards 1 loyalty point for every 50 pesos spent.
             loyaltyPoints += (int) (amount / 50);
         }
     }
