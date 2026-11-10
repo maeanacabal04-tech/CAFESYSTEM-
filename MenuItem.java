@@ -35,9 +35,12 @@ public abstract class MenuItem {
     }
 
     public void setBasePrice(double basePrice) {
+        // Checks if the given base price is zero or positive.
         if (basePrice >= 0) {
             this.basePrice = basePrice;
-        } else {
+        } 
+        else {
+        // Displays an error message if the price is negative.
             System.out.println("Invalid price!");
         }
     }
