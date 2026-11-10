@@ -36,6 +36,7 @@ public class Meal extends MenuItem {
     }
 
     public void setExtraSides(int extraSides) {
+         // Checks if the number of extra sides is zero or positive.
         if (extraSides >= 0) {
             this.extraSides = extraSides;
         }
@@ -45,12 +46,15 @@ public class Meal extends MenuItem {
     public double computePrice() {
         double price = basePrice;
 
-        if (upsized) {
+         // Checks if the customer chooses to upsize the meal.
+         if (upsized) {
             price += 20;
         }
 
+        // Adds 12 pesos for every extra side ordered.
         price += extraSides * 12;
 
+        // Returns the total price of the meal.
         return price;
     }
 
