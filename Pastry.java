@@ -31,15 +31,20 @@ public class Pastry extends MenuItem {
     public double computePrice() {
         double price = basePrice;
 
+        // Checks if the customer wants the pastry to be warmed.
         if (warmed) {
+            // Adds 10 pesos to the base price if the pastry is warmed.
             price += 10;
         }
 
+        // Returns the final price of the pastry.
         return price;
     }
 
     @Override
     public String getDescription() {
+        
+        // Displays "(Warmed)" if the pastry is warmed; otherwise, displays no additional text.
         return name + ".......... [" + getItemCode() + "] .........."
                 + (warmed ? " (Warmed)" : "");
     }
